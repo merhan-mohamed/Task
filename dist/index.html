@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="style.css"  type='text/css'>
+    <link rel="stylesheet" href="/src/input.css" type='text/css'>
+    <title>Focal</title>
+</head>
+<body>
+    <!--NavBar--->
+    <nav class="bg-zinc-700">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+            <!--Small Screen Navigation-->
+              <div class="absolute inset-y-0 right-0 flex items-center sm:hidden" id="menuBtn">
+                <!-- Mobile menu button-->
+                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+                  <!--
+                    Icon when menu is closed.
+        
+                    Menu open: "hidden", Menu closed: "block"
+                  -->
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  <!--
+                    Icon when menu is open.
+        
+                    Menu open: "block", Menu closed: "hidden"
+                  -->
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            <!--End Of Small Screen Navigation-->
+            <div class="flex flex-1 items-center justify-between sm:items-stretch ">
+            <!--Logo-->
+            <div class="flex flex-shrink-0 items-center ">
+                <img class="h-4 w-auto" src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/logo-focal.png?v=1630492228&width=200" alt="Your Company">
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4 justify-between items-center ">
+                <div class="flex items-center justify-between">
+                  <a href="#" class="rounded-md  px-3 py-2 text-sm font-custom text-slate-100  hover:bg-gray-700 " aria-current="page">
+                    Shop by Category</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-custom text-slate-100 hover:bg-gray-700 hover:text-white">
+                    Shop by Device</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-custom text-slate-100 hover:bg-gray-700 hover:text-white">Collections</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-custom text-slate-100 hover:bg-gray-700 hover:text-white">Blog</a>
+
+                  <!--Dropdown-->
+                  <div class="relative inline-block text-left" id="dropDownButton">
+                    <div onclick="toggleDropdown()" >
+                      <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-custom text-slate-100 shadow-sm hover:bg-gray-700  id="menu-button" aria-expanded="true" aria-haspopup="true">
+                       United States (USD $)
+                        <svg class=" h-5 w-5 text-slate-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div id="dropdown" class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-zinc-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" >
+                      <div  class="py-1" role="none">
+                        <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-100" role="menuitem" tabindex="-1" id="menu-item-0">United States (USD $)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-100" role="menuitem" tabindex="-1" id="menu-item-1">United States (USD $)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-slate-100" role="menuitem" tabindex="-1" id="menu-item-2">United States (USD $)</a>
+                        <form method="POST" action="#" role="none">
+                          <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-slate-100" role="menuitem" tabindex="-1" id="menu-item-3">United States (USD $)</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="flex items-center justify-between">
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-custom  text-slate-100 hover:bg-gray-700 hover:text-white"><i class="fa-regular fa fa-envelope"></i></a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-custom text-slate-100 hover:bg-gray-700 hover:text-white"><i class="fa-light  fa fa-magnifying-glass"></i></a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-custom  text-slate-100 hover:bg-gray-700 hover:text-white"><i class="fa-regular fa-user"></i></a>
+                  <a href="#" class="relative rounded-md px-3 py-2 text-sm font-custom text-slate-100 hover:bg-gray-700 hover:text-white"><i class="fa-solid fa-cart-shopping"><span class="absolute top-0 bg-white h-4 w-4 rounded-full text-black text-xs text-center">0</span></i></a>
+                  
+                </div>
+
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            
+           <!---Mobile Menu-->
+          
+            <div class="absolute hidden left-0 space-y-1 pb-3 pt-2  bg-zinc-700 z-10 w-[50%] duration-200" id="menu" >
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="block rounded-md hover:bg-gray-700  px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            </div>
+          
+        </div>
+            
+    </nav>
+    <!---End Of NavBar-->
+
+
+    <!--Hero Image-->
+
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+        <div class="hero bg-[url('/images/hero.jpg')]" ;
+         data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="title uppercase font-semibold text-xs" data-swiper-parallax="-300">Collaboration</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p class="uppercase xs:text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold mt-3">
+               native union <br/> x tom dixin
+              </p>
+            </div>
+            <button class="bg-yellow-500 uppercase text-xs px-8 py-4 mt-3">learn more</button>
+          </div>
+          <div class="swiper-slide">
+            <div class="title uppercase font-semibold text-xs" data-swiper-parallax="-300">Collaboration</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p class="uppercase text-9xl font-bold mt-3">
+               native union <br/> x tom dixin
+              </p>
+            </div>
+            <button class="bg-yellow-500 uppercase text-xs px-8 py-4 mt-3">learn more</button>
+          </div>
+          <div class="swiper-slide">
+            <div class="title uppercase font-semibold text-xs" data-swiper-parallax="-300">Collaboration</div>
+            <div class="" data-swiper-parallax="-100">
+              <p class="uppercase  xs:text-xl text-9xl font-bold mt-3">
+               native union <br/> x tom dixin
+              </p>
+            </div>
+            <button class="bg-yellow-500 uppercase text-xs px-8 py-4 mt-3">learn more</button>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+ <!--swiper-->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="../script.js"></script>
+</body>
+</html>
