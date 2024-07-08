@@ -556,46 +556,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.container{
-  width: 100%;
-}
-
-@media (min-width: 300px){
-  .container{
-    max-width: 300px;
-  }
-}
-
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
-
 .sr-only{
   position: absolute;
   width: 1px;
@@ -629,16 +589,16 @@ video {
   bottom: 0px;
 }
 
+.left-0{
+  left: 0px;
+}
+
 .right-0{
   right: 0px;
 }
 
 .top-0{
   top: 0px;
-}
-
-.left-0{
-  left: 0px;
 }
 
 .z-10{
@@ -694,10 +654,6 @@ video {
   height: 1.5rem;
 }
 
-.h-\[100\%\]{
-  height: 100%;
-}
-
 .w-4{
   width: 1rem;
 }
@@ -714,32 +670,16 @@ video {
   width: 1.5rem;
 }
 
+.w-\[50\%\]{
+  width: 50%;
+}
+
 .w-auto{
   width: auto;
 }
 
 .w-full{
   width: 100%;
-}
-
-.w-0{
-  width: 0px;
-}
-
-.w-\[0px\]{
-  width: 0px;
-}
-
-.w-\[100\%\]{
-  width: 100%;
-}
-
-.w-\[100px\]{
-  width: 100px;
-}
-
-.w-\[50\%\]{
-  width: 50%;
 }
 
 .max-w-7xl{
@@ -754,17 +694,8 @@ video {
   flex-shrink: 0;
 }
 
-.origin-right{
-  transform-origin: right;
-}
-
 .origin-top-right{
   transform-origin: top right;
-}
-
-.scale-x-0{
-  --tw-scale-x: 0;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .items-center{
@@ -832,21 +763,6 @@ video {
 .bg-zinc-700{
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-gray-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
-.bg-red-800{
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/images\/hero\.jpg\'\)\]{
@@ -1087,14 +1003,6 @@ html
 }
 
 @media (min-width: 300px){
-  .xs\:block{
-    display: block;
-  }
-
-  .xs\:hidden{
-    display: none;
-  }
-
   .xs\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
